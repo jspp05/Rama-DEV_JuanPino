@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="oculto">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Mi App</h2>
+      <a href="dashboard.html" class="activo">Inicio</a>
+      <a href="productos.html" class="">Productos</a>
+      <a href="perfil.html" class="">Perfil</a>
+      <div class="usuario">
+        <strong data-user-nombre>Usuario</strong><br>
+        <span data-user-email></span><br><br>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <div class="sup">Panel de ejemplo</div>
+      <h1>Hola, <span data-user-nombre>Usuario</span></h1>
+      <div class="tarjetas">
+        <div class="tarjeta"><small>Sesión</small><strong class="verde">Activa</strong><small>Auth con Supabase</small></div>
+        <div class="tarjeta"><small>Módulo</small><strong>Demo</strong><small>Reemplaza por tus datos</small></div>
+        <div class="tarjeta"><small>Páginas</small><strong>2</strong><small>Inicio y Perfil</small></div>
+      </div>
+      <div class="panel">
+        <h3>Resumen</h3>
+        <p>Esta es una pantalla de muestra después del login. Aquí puedes poner listados, métricas o accesos rápidos.</p>
+        <ul>
+          <li>Navega a <a href="perfil.html">Perfil</a> para ver datos del usuario.</li>
+          <li>Las páginas están protegidas: sin sesión vuelves al login.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config/config.js"></script>
+  <script src="app/models/supabaseClient.js"></script>
+  <script src="app/models/authModel.js"></script>
+  <script src="app/controllers/guardController.js"></script>
+</body>
+</html>
